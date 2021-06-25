@@ -1,0 +1,222 @@
+:root {
+    --clr-light: #fff;
+    --clr-light-translucent: #fff2;
+    --clr-bg: #2f3136;
+    --clr-fg-translucent: #36393fbb;
+    --clr-transparent: #0000;
+    --clr-semi-dark-translucent: #0002;
+    --clr-dark-translucent: #0008;
+    --clr-purple: #39074c;
+    --clr-blue: #55b4d4;
+    --clr-blue-lighter: #7ec6de;
+
+    --clr-github-btn: #21262d;
+    --clr-github-btn-hover: #30363d;
+    --clr-github-accent: #57a4fd;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    color: var(--clr-light);
+    background: var(--clr-bg);
+    overflow-x: hidden;
+}
+
+section {
+    text-align: center;
+}
+
+a {
+    color: var(--clr-blue);
+}
+
+h1 {
+    font-size: 4.25rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+}
+
+code::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-dark-translucent);
+    z-index: -1;
+    border-radius: .3rem;
+}
+
+
+/* ---------------------------------------------------------- */
+/*                          CLASSES                           */
+/* ---------------------------------------------------------- */
+
+
+.icon {
+    font-size: 1.5rem;
+    padding-right: .4rem;
+    vertical-align: middle;
+}
+
+.vertical-align {
+    vertical-align: middle;
+}
+
+.header {
+    background-color: var(--clr-purple);
+    padding: 3rem 3rem 6rem;
+}
+
+.header > h1 {
+    line-height: .8;
+}
+
+.header > h2 {
+    line-height: .9
+}
+
+.spacer {
+    height: .125rem;
+    background-color: var(--clr-blue);
+}
+
+.big-section {
+    min-height: 20rem;
+}
+
+.small-section {
+    min-height: 8.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 40rem) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+    }
+
+    .split > * + * {
+        margin-left: 2rem;
+    }
+}
+
+.btn {
+    position: relative;
+    text-decoration: none;
+    border: none;
+    border-radius: 1rem;
+    min-height: 3.75rem;
+    min-width: 17.1875rem;
+    padding-inline: 1.5625rem;
+    transition: .3s;
+    font-size: 1rem;
+
+    --focus-color: var(--clr-blue);
+
+    color: var(--clr-light);
+    background-color: var(--clr-blue);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--clr-blue-lighter);
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn:focus {
+    outline: none;
+    /*noinspection CssInvalidFunction*/
+    box-shadow: 0 0 0 .1875rem var(--behind-color, #fff),
+        0 0 0 .3125rem var(--focus-color);
+}
+
+.btn > * {
+    vertical-align: middle;
+}
+
+.btn-small {
+    min-width: 12rem;
+    min-height: 3rem;
+
+    transition-duration: .3s;
+}
+
+.btn-arrow::after {
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    position: relative;
+    transition: padding-left .2s;
+    z-index: 4;
+}
+
+.btn-arrow:hover::after {
+    padding-left: .75rem;
+}
+
+.btn-dl::after {
+    content: '\f019';
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
+    padding-left: .75rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    top: -.1rem;
+    transition-duration: .3s;
+    z-index: 4;
+}
+
+.btn-dl:hover::after {
+    transform: translateY(.2rem);
+}
