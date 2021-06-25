@@ -54,6 +54,7 @@ minifyFile () {
 copyAssets () {
     for dir in "${ASSET_FOLDERS[@]}"; do
         echo -e "\033[36mCopying src/$dir to min/$dir\033[0m"
+        rm -r "min/$dir"
         cp -r "src/$dir" "min/$dir"
     done
 }
