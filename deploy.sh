@@ -1,7 +1,15 @@
 #!/bin/bash
 
+# Build site
+echo -e "\033[1;36mBuilding site with parcel\033[0m"
+npm run build
+git add .
+git commit -m "Build site"
+git push origin parcel
+echo -e "\033[33m..done\033[0m"
+
 # Push to deploy branch
-echo -e "\033[1;36mPushing main branch min folder to deploy branch\033[0m"
+echo -e "\033[1;36mPushing main branch dist folder to deploy branch\033[0m"
 git subtree push --prefix dist origin deploy
 echo -e "\033[33m..done\033[0m"
 
