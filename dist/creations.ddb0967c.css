@@ -38,6 +38,7 @@
 }
 .generic-clicker-game-image > h2 {
   top: 42%;
+  max-width: 320px;
   max-width: 20rem;
 }
 @media (max-width: 50rem) {
@@ -66,7 +67,9 @@
 }
 
 .split {
+  margin: 48px 80px;
   margin: 3rem 5rem;
+  max-width: 800px;
   max-width: 50rem;
 }
 
@@ -83,6 +86,7 @@
 }
 .buttons button {
   --behind-color: var(--clr-bg);
+  margin: 9.6px;
   margin: 0.6rem;
 }
 
@@ -97,7 +101,9 @@
   content: "";
   font-family: "Font Awesome 5 Brands", sans-serif;
   font-weight: 400;
+  padding-left: 8px;
   padding-left: 0.5rem;
+  font-size: 22.4px;
   font-size: 1.4rem;
   vertical-align: middle;
   position: relative;
@@ -107,6 +113,7 @@
 .btn-github {
   --focus-color: var(--clr-github-accent);
   background-color: var(--clr-github-btn);
+  border: 2px solid var(--clr-github-accent);
   border: 0.125rem solid var(--clr-github-accent);
   color: var(--clr-github-accent);
 }
@@ -117,7 +124,9 @@
   content: "";
   font-family: "Font Awesome 5 Brands", sans-serif;
   font-weight: 400;
+  padding-left: 8px;
   padding-left: 0.5rem;
+  font-size: 22.4px;
   font-size: 1.4rem;
   vertical-align: middle;
   position: relative;
@@ -129,7 +138,9 @@
   background-color: var(--clr-curseforge-btn);
 }
 .btn-curseforge > i {
+  padding-left: 8px;
   padding-left: 0.5rem;
+  font-size: 24px;
   font-size: 1.5rem;
   vertical-align: middle;
   position: relative;
@@ -143,7 +154,9 @@
 .btn-dl-windows::after {
   font-family: "Font Awesome 5 Brands", sans-serif;
   font-weight: 400;
+  padding-left: 12px;
   padding-left: 0.75rem;
+  font-size: 19.2px;
   font-size: 1.2rem;
   vertical-align: middle;
   display: inline-block;
@@ -179,13 +192,15 @@
 }
 .purple-overlay::before {
   background-color: var(--clr-image-translucent, #612f74bb);
-  clip-path: polygon(100% 0, 0 0, 100% 20%);
+  -webkit-clip-path: polygon(100% 0, 0 0, 100% 20%);
+          clip-path: polygon(100% 0, 0 0, 100% 20%);
 }
 .purple-overlay::after {
   height: 101%;
   top: -0.5%;
   background-color: var(--clr-image-main, #39074c);
-  clip-path: polygon(0 0, 100% 0, 100% 1%, 0 20%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 1%, 0 20%);
+          clip-path: polygon(0 0, 100% 0, 100% 1%, 0 20%);
 }
 
 /*# sourceMappingURL=/creations.ddb0967c.css.map */

@@ -35,21 +35,25 @@ a {
 }
 
 h1 {
+  font-size: 68px;
   font-size: 4.25rem;
   font-weight: 700;
 }
 
 h2 {
+  font-size: 48px;
   font-size: 3rem;
   font-weight: 300;
 }
 
 h3 {
+  font-size: 24px;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
 p {
+  font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -74,7 +78,9 @@ code::before {
 /*                          CLASSES                           */
 /* ---------------------------------------------------------- */
 .icon {
+  font-size: 24px;
   font-size: 1.5rem;
+  padding-right: 6.4px;
   padding-right: 0.4rem;
   vertical-align: middle;
 }
@@ -85,6 +91,7 @@ code::before {
 
 .header {
   background-color: var(--clr-purple);
+  padding: 48px 48px 96px;
   padding: 3rem 3rem 6rem;
 }
 .header > h1 {
@@ -95,15 +102,18 @@ code::before {
 }
 
 .spacer {
+  height: 2px;
   height: 0.125rem;
   background-color: var(--clr-blue);
 }
 
 .big-section {
+  min-height: 320px;
   min-height: 20rem;
 }
 
 .small-section {
+  min-height: 136px;
   min-height: 8.5rem;
   display: flex;
   justify-content: center;
@@ -125,6 +135,7 @@ code::before {
 @media (min-width: 40rem) {
   .split {
     flex-direction: row;
+    gap: 32px;
     gap: 2rem;
   }
   .split > * {
@@ -137,10 +148,14 @@ code::before {
   text-decoration: none;
   border: none;
   border-radius: 1rem;
+  min-height: 60px;
   min-height: 3.75rem;
+  min-width: 275px;
   min-width: 17.1875rem;
+  padding-inline: 25px;
   padding-inline: 1.5625rem;
   transition: 0.3s;
+  font-size: 16px;
   font-size: 1rem;
   --focus-color: var(--clr-blue);
   color: var(--clr-light);
@@ -161,7 +176,9 @@ code::before {
   box-shadow: 0 0 0 0.1875rem var(--behind-color, #fff), 0 0 0 0.3125rem var(--focus-color);
 }
 .btn-small {
+  min-width: 192px;
   min-width: 12rem;
+  min-height: 48px;
   min-height: 3rem;
   transition-duration: 0.3s;
 }
@@ -169,7 +186,9 @@ code::before {
   content: "";
   font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;
+  padding-left: 8px;
   padding-left: 0.5rem;
+  font-size: 19.2px;
   font-size: 1.2rem;
   vertical-align: middle;
   position: relative;
@@ -177,17 +196,21 @@ code::before {
   z-index: 4;
 }
 .btn-arrow:hover::after {
+  padding-left: 12px;
   padding-left: 0.75rem;
 }
 .btn-dl::after {
   content: "";
   font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;
+  padding-left: 12px;
   padding-left: 0.75rem;
+  font-size: 19.2px;
   font-size: 1.2rem;
   vertical-align: middle;
   position: relative;
   display: inline-block;
+  top: -1.6px;
   top: -0.1rem;
   transition-duration: 0.3s;
   z-index: 4;
