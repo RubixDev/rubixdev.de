@@ -41,6 +41,10 @@
     @media (min-width: 40rem) {
         text-align: left;
         margin: auto 2rem;
+
+        p {
+            max-width: 12rem;
+        }
     }
 }
 
@@ -73,12 +77,6 @@
 
 /* =========== @MEDIA QUERY =========== */
 @media (min-width: 40rem) {
-
-    /* ----------- CREATIONS ---------- */
-    #creationsRight p {
-        max-width: 12rem;
-    }
-
     /* ------------ VIDEOS ------------ */
     #videosLeft {
         text-align: right;
