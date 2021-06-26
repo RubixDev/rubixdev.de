@@ -65,34 +65,30 @@
 #videosLeft {
     text-align: center;
     margin: 4.5rem 3rem 1rem;
-}
 
-#videosRight {
-    margin: 1rem 2rem 2rem;
-}
-
-.btn-videos {
-    --behind-color: var(--clr-videos-bg);
-}
-
-/* =========== @MEDIA QUERY =========== */
-@media (min-width: 40rem) {
-    /* ------------ VIDEOS ------------ */
-    #videosLeft {
+    @media (min-width: 40rem) {
         text-align: right;
         margin: auto 2rem;
         display: flex;
         flex-flow: row-reverse;
-    }
 
-    #videosLeft p {
-        max-width: 12rem;
+        p {
+            max-width: 12rem;
+        }
     }
+}
 
-    #videosRight {
+#videosRight {
+    margin: 1rem 2rem 2rem;
+
+    @media (min-width: 40rem) {
         text-align: left;
         margin: auto 2rem;
     }
+}
+
+.btn-videos {
+    --behind-color: var(--clr-videos-bg);
 }
 
 /* ============== GITHUB ============== */
@@ -108,11 +104,11 @@
     background-color: var(--clr-github-btn);
     border: .0625rem solid var(--clr-github-btn);
     transition-duration: .2s;
-}
 
-.btn-github:hover {
-    background-color: var(--clr-github-btn-hover);
-    border: .0625rem solid var(--clr-github-accent);
+    &:hover {
+        background-color: var(--clr-github-btn-hover);
+        border: .0625rem solid var(--clr-github-accent);
+    }
 }
 
 /* =============== ITCH =============== */
@@ -127,11 +123,11 @@
     color: var(--clr-light);
     background-color: var(--clr-transparent);
     border: 0.125rem solid var(--clr-light);
-}
 
-.btn-itch:hover {
-    color: var(--clr-itch-bg);
-    background-color: var(--clr-light);
+    &:hover {
+        color: var(--clr-itch-bg);
+        background-color: var(--clr-light);
+    }
 }
 
 /* ============== DISCORD ============= */
@@ -145,8 +141,8 @@
 
     color: var(--clr-light);
     background-color: var(--clr-discord-btn);
-}
 
-.btn-discord:hover {
-    background-color: var(--clr-discord-btn-hover);
+    &:hover {
+        background-color: var(--clr-discord-btn-hover);
+    }
 }

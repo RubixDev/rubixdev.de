@@ -57,18 +57,18 @@ p {
 code {
     font-family: 'JetBrains Mono', monospace;
     position: relative;
-}
 
-code::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--clr-dark-translucent);
-    z-index: -1;
-    border-radius: .3rem;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--clr-dark-translucent);
+        z-index: -1;
+        border-radius: .3rem;
+    }
 }
 
 
@@ -91,11 +91,11 @@ code::before {
     background-color: var(--clr-purple);
     padding: 3rem 3rem 6rem;
 
-    & > h1 {
+    > h1 {
         line-height: .8;
     }
 
-    & > h2 {
+    > h2 {
         line-height: .9;
     }
 }
@@ -132,7 +132,7 @@ code::before {
         flex-direction: row;
         gap: 2rem;
 
-        & > * {
+        > * {
             flex-basis: 100%;
         }
     }
@@ -154,6 +154,10 @@ code::before {
     color: var(--clr-light);
     background-color: var(--clr-blue);
 
+    > * {
+        vertical-align: middle;
+    }
+
     &:hover {
         cursor: pointer;
         background-color: var(--clr-blue-lighter);
@@ -169,11 +173,6 @@ code::before {
             0 0 0 .1875rem var(--behind-color, #fff),
             0 0 0 .3125rem var(--focus-color);
     }
-
-    & > * {
-        vertical-align: middle;
-    }
-
 
     &-small {
         min-width: 12rem;

@@ -1,0 +1,144 @@
+[image-overlay] {
+  height: 40rem;
+  background-size: cover;
+  background-position-x: center;
+  position: relative;
+}
+@media (max-width: 50rem) {
+  [image-overlay] {
+    height: 80vw;
+  }
+}
+[image-overlay] > h1,
+[image-overlay] > h2 {
+  position: absolute;
+  left: 3rem;
+  z-index: 2;
+  text-align: start;
+  margin: 0;
+}
+[image-overlay] > h1 {
+  top: 44%;
+  max-width: 24rem;
+  font-size: 3rem;
+}
+@media (max-width: 50rem) {
+  [image-overlay] > h1 {
+    top: 46%;
+    max-width: initial;
+    font-size: 7vw;
+  }
+}
+[image-overlay] > h2 {
+  top: 54%;
+  max-width: 15rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 50rem) {
+  [image-overlay] > h2 {
+    top: 60%;
+    font-size: 3.6vw;
+    max-width: 48vw;
+  }
+}
+[image-overlay]::before, [image-overlay]::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+[image-overlay]::before {
+  background-color: var(--clr-fg-translucent, #36393fbb);
+  clip-path: polygon(0 0, calc(100% - 35rem) 0, calc(100% - 15rem) 100%, 0 100%);
+}
+@media (max-width: 50rem) {
+  [image-overlay]::before {
+    clip-path: polygon(0 30%, 100% 70%, 100% 100%, 0 100%);
+  }
+}
+@media (min-width: 62.5rem) {
+  [image-overlay]::before {
+    clip-path: polygon(0 0, 27.5rem 0, 47.5rem 100%, 0 100%);
+  }
+}
+[image-overlay]::after {
+  height: 101%;
+  top: -0.5%;
+  background-color: var(--clr-bg, #2F3136);
+  clip-path: polygon(0 100%, 1% 100%, 100% 70%, 100% 100%);
+}
+@media (max-width: 50rem) {
+  [image-overlay]::after {
+    clip-path: polygon(0 100%, 0 99%, 100% 50%, 100% 100%);
+  }
+}
+
+/* ADDITIONAL TOP TRIANGLES */
+[image-overlay*=with-top]::after {
+  clip-path: polygon(0 0, 100% 0, 100% 1%, 0 20%, 0 99%, 100% 70%, 100% 100%, 0 100%);
+}
+
+/* On mobile devices */
+@media (max-width: 50rem) {
+  [image-overlay=with-top]::before {
+    clip-path: polygon(100% 0, 0 0, 100% 20%, 100% 100%, 0 100%, 0 30%, 100% 70%);
+  }
+
+  [image-overlay=with-top]::after {
+    clip-path: polygon(0 0, 100% 0, 100% 1%, 0 20%, 0 99%, 100% 50%, 100% 100%, 0 100%);
+  }
+}
+/* ------------------------------------ */
+/*          ALTERNATIVE LAYOUT          */
+/* ------------------------------------ */
+[image-overlay*=alt] > h1,
+[image-overlay*=alt] > h2 {
+  text-align: end;
+  left: auto;
+  right: 3rem;
+}
+[image-overlay*=alt] > h1 {
+  top: 20%;
+}
+@media (max-width: 50rem) {
+  [image-overlay*=alt] > h1 {
+    top: 46%;
+  }
+}
+[image-overlay*=alt] > h2 {
+  top: 32%;
+}
+@media (max-width: 50rem) {
+  [image-overlay*=alt] > h2 {
+    top: 60% !important;
+  }
+}
+[image-overlay*=alt]::before {
+  clip-path: polygon(100% 100%, 100% 0, calc(100% - 35rem) 0, calc(100% - 15rem) 100%);
+}
+@media (max-width: 50rem) {
+  [image-overlay*=alt]::before {
+    clip-path: polygon(100% 30%, 0 70%, 0 100%, 100% 100%);
+  }
+}
+@media (max-width: 50rem) {
+  [image-overlay*=alt]::after {
+    clip-path: polygon(100% 100%, 100% 99%, 0 50%, 0 100%);
+  }
+}
+
+/* ADDITIONAL TOP TRIANGLES */
+/* On mobile devices */
+@media (max-width: 50rem) {
+  [image-overlay=alt-with-top]::before {
+    clip-path: polygon(0 0, 100% 0, 0 20%, 0 100%, 100% 100%, 100% 30%, 0 70%);
+  }
+
+  [image-overlay=alt-with-top]::after {
+    clip-path: polygon(100% 0, 0 0, 0 1%, 100% 20%, 100% 99%, 0 50%, 0 100%, 100% 100%);
+  }
+}
+
+/*# sourceMappingURL=/image-overlay.10e8e91a.css.map */

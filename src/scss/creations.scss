@@ -15,10 +15,10 @@
 
 .picture-guessing-image {
     background-image: url('../assets/picture-guessing-bg.webp');
-}
 
-.picture-guessing-image > h2 {
-    top: 42%;
+    > h2 {
+        top: 42%;
+    }
 }
 
 .dice-riddle-image {
@@ -27,6 +27,27 @@
 
 .generic-clicker-game-image {
     background-image: url('../assets/generic-clicker-game-bg.webp');
+
+    > h1 {
+        top: 20%;
+
+        @media (max-width: 50rem) {
+            top: 44%;
+            font-size: 6vw;
+            max-width: 44vw;
+        }
+    }
+
+    > h2 {
+        top: 42%;
+        max-width: 20rem;
+
+        @media (max-width: 50rem) {
+            top: 64% !important;
+            font-size: 3.6vw;
+            max-width: 52vw;
+        }
+    }
 }
 
 .cube-loop-image {
@@ -46,29 +67,6 @@
     background-image: url('../assets/brain-age-bg.webp');
 }
 
-.generic-clicker-game-image > h1 {
-    top: 20%;
-}
-
-.generic-clicker-game-image > h2 {
-    top: 42%;
-    max-width: 20rem;
-}
-
-@media (max-width: 50rem) {
-    .generic-clicker-game-image > h1 {
-        top: 44%;
-        font-size: 6vw;
-        max-width: 44vw;
-    }
-
-    .generic-clicker-game-image > h2 {
-        top: 64% !important;
-        font-size: 3.6vw;
-        max-width: 52vw;
-    }
-}
-
 .split {
     margin: 3rem 5rem;
     max-width: 50rem;
@@ -81,36 +79,36 @@
 
 .buttons {
     flex-basis: 40%;
-}
 
-.buttons a {
-    text-decoration: none;
-}
+    a {
+        text-decoration: none;
+    }
 
-.buttons button {
-    --behind-color: var(--clr-bg);
+    button {
+        --behind-color: var(--clr-bg);
 
-    margin: .6rem;
+        margin: .6rem;
+    }
 }
 
 .btn-itch {
     --focus-color: var(--clr-itch-btn);
     background-color: var(--clr-itch-btn);
-}
 
-.btn-itch:hover {
-    background-color: var(--clr-itch-btn-hover);
-}
+    &:hover {
+        background-color: var(--clr-itch-btn-hover);
+    }
 
-.btn-itch::after {
-    content: '\f83a';
-    font-family: 'Font Awesome 5 Brands', sans-serif;
-    font-weight: 400;
-    padding-left: .5rem;
-    font-size: 1.4rem;
-    vertical-align: middle;
-    position: relative;
-    z-index: 4;
+    &::after {
+        content: '\f83a';
+        font-family: 'Font Awesome 5 Brands', sans-serif;
+        font-weight: 400;
+        padding-left: .5rem;
+        font-size: 1.4rem;
+        vertical-align: middle;
+        position: relative;
+        z-index: 4;
+    }
 }
 
 .btn-github {
@@ -119,39 +117,38 @@
     background-color: var(--clr-github-btn);
     border: .125rem solid var(--clr-github-accent);
     color: var(--clr-github-accent);
-}
 
-.btn-github:hover {
-    background-color: var(--clr-github-btn-hover);
-}
+    &:hover {
+        background-color: var(--clr-github-btn-hover);
+    }
 
-.btn-github::after {
-    content: '\f09b';
-    font-family: 'Font Awesome 5 Brands', sans-serif;
-    font-weight: 400;
-    padding-left: .5rem;
-    font-size: 1.4rem;
-    vertical-align: middle;
-    position: relative;
-    z-index: 4;
+    &::after {
+        content: '\f09b';
+        font-family: 'Font Awesome 5 Brands', sans-serif;
+        font-weight: 400;
+        padding-left: .5rem;
+        font-size: 1.4rem;
+        vertical-align: middle;
+        position: relative;
+        z-index: 4;
+    }
 }
-
 
 .btn-curseforge {
     --focus-color: var(--clr-curseforge-btn);
     background-color: var(--clr-curseforge-btn);
-}
 
-.btn-curseforge:hover {
-    background-color: var(--clr-curseforge-btn-hover);
-}
+    > i {
+        padding-left: .5rem;
+        font-size: 1.5rem;
+        vertical-align: middle;
+        position: relative;
+        z-index: 4;
+    }
 
-.btn-curseforge > i {
-    padding-left: .5rem;
-    font-size: 1.5rem;
-    vertical-align: middle;
-    position: relative;
-    z-index: 4;
+    &:hover {
+        background-color: var(--clr-curseforge-btn-hover);
+    }
 }
 
 .btn-dl-android::after,
@@ -183,31 +180,31 @@
     position: absolute;
     width: 100%;
     height: 100%;
-}
 
-.purple-overlay::before,
-.purple-overlay::after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
+    &::before,
+    &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
 
-.purple-overlay::before {
-    background-color: var(--clr-image-translucent, #612f74bb);
-    clip-path: polygon(100% 0,
-            0 0,
-            100% 20%);
-}
+    &::before {
+        background-color: var(--clr-image-translucent, #612f74bb);
+        clip-path: polygon(100% 0,
+                0 0,
+                100% 20%);
+    }
 
-.purple-overlay::after {
-    height: 101%;
-    top: -.5%;
-    background-color: var(--clr-image-main, #39074c);
-    clip-path: polygon(0 0,
-            100% 0,
-            100% 1%,
-            0 20%);
+    &::after {
+        height: 101%;
+        top: -.5%;
+        background-color: var(--clr-image-main, #39074c);
+        clip-path: polygon(0 0,
+                100% 0,
+                100% 1%,
+                0 20%);
+    }
 }

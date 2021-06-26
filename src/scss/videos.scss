@@ -34,6 +34,10 @@ h2 {
     align-items: center;
     gap: 2rem;
     margin: 2rem auto;
+
+    @media (min-width: 40rem) {
+        margin: auto 2rem;
+    }
 }
 
 .text-div {
@@ -42,63 +46,55 @@ h2 {
     margin: 2rem 3rem;
 }
 
-@media (min-width: 40rem) {
-    .buttons-div {
-        margin: auto 2rem;
-    }
-}
-
 /* --------- PLAYLIST SECTION --------- */
 .playlist-section {
     min-height: 15rem;
-}
 
-.playlist-section div:first-of-type {
-    margin: 1rem 1rem 0;
-}
+    div:first-of-type {
+        margin: 1rem 1rem 0;
 
-.playlist-section div:last-of-type {
-    margin: 2rem 1rem 4rem;
-}
-
-.playlist-section button {
-    --focus-color: var(--clr-yt-red);
-    --behind-color: var(--clr-bg);
-}
-
-@media (min-width: 40rem) {
-    .playlist-section div:first-of-type {
-        margin: auto 1rem auto 2rem;
+        @media (min-width: 40rem) {
+            margin: auto 1rem auto 2rem;
+        }
     }
 
-    .playlist-section div:last-of-type {
-        margin: auto 2rem auto 1rem;
+    div:last-of-type {
+        margin: 2rem 1rem 4rem;
+
+        @media (min-width: 40rem) {
+            margin: auto 2rem auto 1rem;
+        }
+    }
+
+    .btn {
+        --focus-color: var(--clr-yt-red);
+        --behind-color: var(--clr-bg);
     }
 }
 
 /* ---------- YOUTUBE BUTTON ---------- */
 .btn {
     --focus-color: var(--clr-light);
-}
 
-.btn-yt {
-    background-color: var(--clr-yt-red);
-}
+    &-yt {
+        background-color: var(--clr-yt-red);
 
-.btn-yt:hover {
-    background-color: var(--clr-yt-red-darker);
-}
+        &:hover {
+            background-color: var(--clr-yt-red-darker);
 
-.btn-yt::after {
-    content: '\f167';
-    font-family: 'Font Awesome 5 Brands', sans-serif;
-    font-weight: 400;
-    padding-left: .75rem;
-    font-size: 1.25rem;
-    vertical-align: middle;
-    transition: padding-left .3s;
-}
+            &::after {
+                padding-left: .5rem;
+            }
+        }
 
-.btn-yt:hover::after {
-    padding-left: .5rem;
+        &::after {
+            content: '\f167';
+            font-family: 'Font Awesome 5 Brands', sans-serif;
+            font-weight: 400;
+            padding-left: .75rem;
+            font-size: 1.25rem;
+            vertical-align: middle;
+            transition: padding-left .3s;
+        }
+    }
 }
