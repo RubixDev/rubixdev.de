@@ -27,6 +27,11 @@
 
 #creationsLeft {
     margin: 5.5rem 2rem 1rem;
+
+    @media (min-width: 40rem) {
+        text-align: right;
+        margin: auto 2rem;
+    }
 }
 
 #creationsRight {
@@ -65,11 +70,6 @@
 @media (min-width: 40rem) {
 
     /* ----------- CREATIONS ---------- */
-    #creationsLeft {
-        text-align: right;
-        margin: auto 2rem;
-    }
-
     #creationsRight {
         text-align: left;
         margin: auto 2rem;
