@@ -1,0 +1,27 @@
+{
+  "name": "rubixdev.de",
+  "version": "1.0.0",
+  "description": "My personal website accessible under [rubixdev.de](https://rubixdev.de)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubixDev/rubixdev.de.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RubixDev/rubixdev.de/issues"
+  },
+  "homepage": "https://github.com/RubixDev/rubixdev.de#readme",
+  "devDependencies": {
+    "@types/node": "^15.12.4",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.35.1",
+    "typescript": "^4.3.4"
+  }
+}

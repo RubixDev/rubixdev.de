@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* ------------ VARIABLES ------------- */
+:root {
+  --clr-yt-red: #f00;
+  --clr-yt-red-darker: #c00;
+}
+
+/* -------- GENERAL OVERRIDES --------- */
+h2 {
+  font-size: 2.5rem;
+}
+
+.video-section {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+}
+
+/* --------- SPECIFIC CLASSES --------- */
+.video-title {
+  font-size: 2rem;
+  color: var(--clr-light);
+  margin: 0;
+  padding: 3rem 1rem 0;
+}
+
+.darker-bg {
+  background-color: var(--clr-dark-translucent);
+}
+
+.buttons-div {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
+.text-div {
+  flex-basis: 60%;
+  color: var(--clr-light);
+  margin: 2rem 3rem;
+}
+
+@media (min-width: 40rem) {
+  .buttons-div {
+    margin: auto 2rem;
+  }
+}
+/* --------- PLAYLIST SECTION --------- */
+.playlist-section {
+  min-height: 15rem;
+}
+
+.playlist-section div:first-of-type {
+  margin: 1rem 1rem 0;
+}
+
+.playlist-section div:last-of-type {
+  margin: 2rem 1rem 4rem;
+}
+
+.playlist-section button {
+  --focus-color: var(--clr-yt-red);
+  --behind-color: var(--clr-bg);
+}
+
+@media (min-width: 40rem) {
+  .playlist-section div:first-of-type {
+    margin: auto 1rem auto 2rem;
+  }
+
+  .playlist-section div:last-of-type {
+    margin: auto 2rem auto 1rem;
+  }
+}
+/* ---------- YOUTUBE BUTTON ---------- */
+.btn {
+  --focus-color: var(--clr-light);
+}
+
+.btn-yt {
+  background-color: var(--clr-yt-red);
+}
+
+.btn-yt:hover {
+  background-color: var(--clr-yt-red-darker);
+}
+
+.btn-yt::after {
+  content: "";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  font-weight: 400;
+  padding-left: 0.75rem;
+  font-size: 1.25rem;
+  vertical-align: middle;
+  transition: padding-left 0.3s;
+}
+
+.btn-yt:hover::after {
+  padding-left: 0.5rem;
+}
+
+/*# sourceMappingURL=/videos.ea3ef7bb.css.map */

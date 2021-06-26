@@ -1,0 +1,205 @@
+@charset "UTF-8";
+:root {
+  --clr-image-main: #39074c;
+  --clr-image-translucent: #612f74bb;
+  --clr-curseforge-btn: #F16436;
+  --clr-curseforge-btn-hover: #FF8246;
+  --clr-itch-btn: #FA5C5C;
+  --clr-itch-btn-hover: #E15353;
+}
+
+.rug-image {
+  background-image: url("/rug-bg.6dbb07de.webp");
+}
+
+.picture-guessing-image {
+  background-image: url("/picture-guessing-bg.e696ee07.webp");
+}
+
+.picture-guessing-image > h2 {
+  top: 42%;
+}
+
+.dice-riddle-image {
+  background-image: url("/dice-riddle-bg.95741581.webp");
+}
+
+.generic-clicker-game-image {
+  background-image: url("/generic-clicker-game-bg.ad2abe27.webp");
+}
+
+.cube-loop-image {
+  background-image: url("/cube-loop-bg.fdb57cd8.webp");
+}
+
+.video2midi-image {
+  background-image: url("/video2midi-bg.615986f2.webp");
+  background-position: center;
+}
+
+.img2midi-image {
+  background-image: url("/img2midi-bg.f7ea6309.webp");
+}
+
+.brain-age-image {
+  background-image: url("/brain-age-bg.8d8915ac.webp");
+}
+
+.generic-clicker-game-image > h1 {
+  top: 20%;
+}
+
+.generic-clicker-game-image > h2 {
+  top: 42%;
+  max-width: 20rem;
+}
+
+@media (max-width: 50rem) {
+  .generic-clicker-game-image > h1 {
+    top: 44%;
+    font-size: 6vw;
+    max-width: 44vw;
+  }
+
+  .generic-clicker-game-image > h2 {
+    top: 64% !important;
+    font-size: 3.6vw;
+    max-width: 52vw;
+  }
+}
+.split {
+  margin: 3rem 5rem;
+  max-width: 50rem;
+}
+
+.description {
+  text-align: left;
+  flex-basis: 60%;
+}
+
+.buttons {
+  flex-basis: 40%;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.buttons button {
+  --behind-color: var(--clr-bg);
+  margin: 0.6rem;
+}
+
+.btn-itch {
+  --focus-color: var(--clr-itch-btn);
+  background-color: var(--clr-itch-btn);
+}
+
+.btn-itch:hover {
+  background-color: var(--clr-itch-btn-hover);
+}
+
+.btn-itch::after {
+  content: "";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  font-weight: 400;
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+  vertical-align: middle;
+  position: relative;
+  z-index: 4;
+}
+
+.btn-github {
+  --focus-color: var(--clr-github-accent);
+  background-color: var(--clr-github-btn);
+  border: 0.125rem solid var(--clr-github-accent);
+  color: var(--clr-github-accent);
+}
+
+.btn-github:hover {
+  background-color: var(--clr-github-btn-hover);
+}
+
+.btn-github::after {
+  content: "";
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  font-weight: 400;
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+  vertical-align: middle;
+  position: relative;
+  z-index: 4;
+}
+
+.btn-curseforge {
+  --focus-color: var(--clr-curseforge-btn);
+  background-color: var(--clr-curseforge-btn);
+}
+
+.btn-curseforge:hover {
+  background-color: var(--clr-curseforge-btn-hover);
+}
+
+.btn-curseforge > i {
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  position: relative;
+  z-index: 4;
+}
+
+.btn-dl-android::after,
+.btn-dl-windows::after {
+  font-family: "Font Awesome 5 Brands", sans-serif;
+  font-weight: 400;
+  padding-left: 0.75rem;
+  font-size: 1.2rem;
+  vertical-align: middle;
+  display: inline-block;
+  transition-duration: 0.3s;
+  z-index: 4;
+}
+
+.btn-dl-android::after {
+  content: "";
+}
+
+.btn-dl-windows::after {
+  content: "";
+}
+
+.btn-dl-android:hover::after,
+.btn-dl-windows:hover::after {
+  transform: translateY(0.15rem);
+}
+
+.purple-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.purple-overlay::before,
+.purple-overlay::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.purple-overlay::before {
+  background-color: var(--clr-image-translucent, #612f74bb);
+  clip-path: polygon(100% 0, 0 0, 100% 20%);
+}
+
+.purple-overlay::after {
+  height: 101%;
+  top: -0.5%;
+  background-color: var(--clr-image-main, #39074c);
+  clip-path: polygon(0 0, 100% 0, 100% 1%, 0 20%);
+}
+
+/*# sourceMappingURL=/creations.ddb0967c.css.map */

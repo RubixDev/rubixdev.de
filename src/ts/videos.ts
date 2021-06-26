@@ -1,3 +1,5 @@
+import { addLoadEvent } from "./main";
+
 function createButtonsDiv(videoFileName: string, videoYouTubeLink: string) {
     const divButtons = document.createElement('div')
     divButtons.setAttribute('class', 'buttons-div')
@@ -46,21 +48,15 @@ function createTextDiv(videoDescription: string) {
 }
 
 addLoadEvent(function () {
-    const sections = document.getElementsByClassName('video-section')
-    for (let i = 0; i < sections.length; i++) {
-        const section = sections[i]
+    const sections = document.getElementsByClassName('video-section') as HTMLCollection
+    for (let [index, section] of sections.entries()) {
 
-        const videoId = section.id
         const videoTitle = (section.getElementsByClassName('title')[0] as HTMLElement).innerText
         const videoFileName = (section.getElementsByClassName('filename')[0] as HTMLElement).innerText
         const videoYouTubeLink = (section.getElementsByClassName('yt-link')[0] as HTMLElement).innerText
         const videoDescription = section.getElementsByClassName('description')[0].innerHTML
 
         section.innerHTML = ''
-        section.setAttribute(
-            'style',
-            `background-image: url('../assets/${videoId}-bg.webp')`
-        )
 
         const divDarkerBg = document.createElement('div')
         divDarkerBg.setAttribute('class', 'darker-bg')
@@ -74,7 +70,7 @@ addLoadEvent(function () {
         const divSplit = document.createElement('div')
         divSplit.setAttribute('class', 'split big-section')
 
-        if (i % 2 === 0) {
+        if (index % 2 === 0) {
             divSplit.appendChild(createButtonsDiv(videoFileName, videoYouTubeLink))
             divSplit.appendChild(createTextDiv(videoDescription))
         } else {
