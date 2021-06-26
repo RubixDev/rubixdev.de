@@ -1,3 +1,5 @@
+import { addLoadEvent, copyText } from "./main";
+
 addLoadEvent(function () {
     const discordButton = document.getElementById('discordButton')!
     discordButton.addEventListener('click', function () {

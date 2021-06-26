@@ -1,4 +1,4 @@
-function copyText(text: string) {
+export function copyText(text: string) {
     const temp = document.createElement('textarea')
     temp.innerHTML = text
     document.body.appendChild(temp)
@@ -6,6 +6,34 @@ function copyText(text: string) {
     temp.setSelectionRange(0, 99999)
     document.execCommand('copy')
     document.body.removeChild(temp)
+}
+
+export function addLoadEvent(func: () => void) {
+    const oldOnLoad: any = window.onload
+    if (typeof window.onload != 'function') {
+        window.onload = func
+    } else {
+        window.onload = function () {
+            if (oldOnLoad) {
+                oldOnLoad(undefined)
+            }
+            func()
+        }
+    }
+}
+
+declare global {
+    interface HTMLCollection {
+        entries(): [number, HTMLElement][]
+    }
+}
+
+HTMLCollection.prototype.entries = function () {
+    const out = []
+    for (let i = 0; i < this.length; i++) {
+        out.push([i, this[i]] as [number, HTMLElement])
+    }
+    return out
 }
 
 function _addNavbarListItem(list: HTMLUListElement, href: string, html: string) {
@@ -26,20 +54,6 @@ function addNavbarListItem(list: HTMLUListElement, href: string, icon: string, t
         href = `/${window.location.pathname.split('/')[1]}${href}`
     }
     _addNavbarListItem(list, href, `<i class="${icon}"></i><span style="vertical-align: middle;">${text}</span>`)
-}
-
-function addLoadEvent(func: () => void) {
-    const oldOnLoad: any = window.onload
-    if (typeof window.onload != 'function') {
-        window.onload = func
-    } else {
-        window.onload = function () {
-            if (oldOnLoad) {
-                oldOnLoad(undefined)
-            }
-            func()
-        }
-    }
 }
 
 addLoadEvent(function () {

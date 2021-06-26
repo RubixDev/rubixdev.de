@@ -1,3 +1,5 @@
+import { addLoadEvent } from "./main";
+
 addLoadEvent(function () {
     const curseForgeButtons = document.getElementsByClassName('btn-curseforge')
     for (let buttonIndex = 0; buttonIndex < curseForgeButtons.length; buttonIndex++) {

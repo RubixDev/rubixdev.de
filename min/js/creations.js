@@ -1,1 +1,0 @@
-"use strict";addLoadEvent((function(){const e=document.getElementsByClassName("btn-curseforge");for(let t=0;t<e.length;t++){const s=e[t],n=document.createElement("i");n.setAttribute("class","si si-curseforge"),s.appendChild(n)}}));
