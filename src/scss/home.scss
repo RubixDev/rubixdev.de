@@ -37,6 +37,11 @@
 #creationsRight {
     text-align: center;
     margin: 1rem 3rem 2rem;
+
+    @media (min-width: 40rem) {
+        text-align: left;
+        margin: auto 2rem;
+    }
 }
 
 .btn-creations {
@@ -70,11 +75,6 @@
 @media (min-width: 40rem) {
 
     /* ----------- CREATIONS ---------- */
-    #creationsRight {
-        text-align: left;
-        margin: auto 2rem;
-    }
-
     #creationsRight p {
         max-width: 12rem;
     }
