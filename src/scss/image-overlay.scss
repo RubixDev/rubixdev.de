@@ -1,10 +1,12 @@
+@use 'mixins/media-queries.scss' as *;
+
 [image-overlay] {
     height: 40rem;
     background-size: cover;
     background-position-x: center;
     position: relative;
 
-    @media (max-width: 50rem) {
+    @include maxW(50rem) {
         height: 80vw;
     }
 
@@ -22,7 +24,7 @@
         max-width: 24rem;
         font-size: 3rem;
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             top: 46%;
             max-width: initial;
             font-size: 7vw;
@@ -34,7 +36,7 @@
         max-width: 15rem;
         font-size: 1.5rem;
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             top: 60%;
             font-size: 3.6vw;
             max-width: 48vw;
@@ -58,7 +60,7 @@
                 calc(100% - 15rem) 100%,
                 0 100%);
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             clip-path: polygon(0 30%,
                     100% 70%,
                     100% 100%,
@@ -82,7 +84,7 @@
                 100% 70%,
                 100% 100%);
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             clip-path: polygon(0 100%,
                     0 99%,
                     100% 50%,
@@ -106,7 +108,7 @@
 }
 
 /* On mobile devices */
-@media (max-width: 50rem) {
+@include maxW(50rem) {
     [image-overlay="with-top"]::before {
         clip-path: polygon(100% 0,
                 0 0,
@@ -146,7 +148,7 @@
     > h1 {
         top: 20%;
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             top: 46%;
         }
     }
@@ -154,7 +156,7 @@
     > h2 {
         top: 32%;
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             top: 60% !important;
         }
     }
@@ -165,7 +167,7 @@
                 calc(100% - 35rem) 0,
                 calc(100% - 15rem) 100%);
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             clip-path: polygon(100% 30%,
                     0 70%,
                     0 100%,
@@ -174,7 +176,7 @@
     }
 
     &::after {
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             clip-path: polygon(100% 100%,
                     100% 99%,
                     0 50%,
@@ -187,7 +189,7 @@
 /* ADDITIONAL TOP TRIANGLES */
 
 /* On mobile devices */
-@media (max-width: 50rem) {
+@include maxW(50rem) {
     [image-overlay="alt-with-top"]::before {
         clip-path: polygon(0 0,
                 100% 0,

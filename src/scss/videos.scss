@@ -1,3 +1,5 @@
+@use 'mixins/media-queries.scss' as *;
+
 /* ------------ VARIABLES ------------- */
 :root {
     --clr-yt-red: #f00;
@@ -35,7 +37,7 @@ h2 {
     gap: 2rem;
     margin: 2rem auto;
 
-    @media (min-width: 40rem) {
+    @include minW(40rem) {
         margin: auto 2rem;
     }
 }
@@ -53,7 +55,7 @@ h2 {
     div:first-of-type {
         margin: 1rem 1rem 0;
 
-        @media (min-width: 40rem) {
+        @include minW(40rem) {
             margin: auto 1rem auto 2rem;
         }
     }
@@ -61,7 +63,7 @@ h2 {
     div:last-of-type {
         margin: 2rem 1rem 4rem;
 
-        @media (min-width: 40rem) {
+        @include minW(40rem) {
             margin: auto 2rem auto 1rem;
         }
     }

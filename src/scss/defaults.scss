@@ -1,3 +1,6 @@
+@use 'mixins/media-queries.scss'as *;
+@use 'mixins/center.scss';
+
 :root {
     --clr-light: #fff;
     --clr-light-translucent: #fff2;
@@ -111,24 +114,18 @@ code {
 
 .small-section {
     min-height: 8.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center.children;
 }
 
 .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center.children;
 }
 
 .split {
-    display: flex;
+    @include center.children;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    @media (min-width: 40rem) {
+    @include minW(40rem) {
         flex-direction: row;
         gap: 2rem;
 

@@ -1,3 +1,5 @@
+@use 'mixins/media-queries.scss' as *;
+
 :root {
     --clr-image-main: #39074c;
     --clr-image-translucent: #612f74bb;
@@ -31,7 +33,7 @@
     > h1 {
         top: 20%;
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             top: 44%;
             font-size: 6vw;
             max-width: 44vw;
@@ -42,7 +44,7 @@
         top: 42%;
         max-width: 20rem;
 
-        @media (max-width: 50rem) {
+        @include maxW(50rem) {
             top: 64% !important;
             font-size: 3.6vw;
             max-width: 52vw;
