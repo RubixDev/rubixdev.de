@@ -28,6 +28,7 @@ addLoadEvent(function () {
     const ageDt = new Date(diff)
     const year = ageDt.getUTCFullYear()
     const age = Math.abs(year - 1970)
+    console.log('Calculated age: ', age)
 
     const ageHeader = document.getElementById('age-header')!
     ageHeader.innerText = age + '-year-old student'
