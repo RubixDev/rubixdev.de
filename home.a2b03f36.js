@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"wnPW":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=require("./main");e.addLoadEvent(function(){var t=document.getElementById("discordButton");t.addEventListener("click",function(){e.copyText("Rubix#7875"),t.setAttribute("tooltip","Copied 'Rubix#7875' to Clipboard")}),t.addEventListener("mouseout",function(){setTimeout(function(){t.setAttribute("tooltip","Copy to Clipboard")},300)})}),e.addLoadEvent(function(){var e=new Date(2005,1,18),t=Date.now()-e.getTime(),o=new Date(t).getUTCFullYear(),n=Math.abs(o-1970);console.log("Calculated age: ",n),document.getElementById("age-header").innerText=n+"-year-old student"});
 },{"./main":"g7hl"}]},{},["wnPW"], null)
-//# sourceMappingURL=home.a2b03f36.js.map
+//# sourceMappingURL=/home.a2b03f36.js.map
