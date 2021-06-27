@@ -23,6 +23,7 @@
 
 npm run build
 git checkout deploy
+git stash pop
 cp -r dist/* ./
 git add .
 git commit -m "Build"
@@ -30,4 +31,5 @@ git push origin deploy
 for f in dist/*; do
     rm -r "$(basename "$f")"
 done
+git stash save
 git checkout main
