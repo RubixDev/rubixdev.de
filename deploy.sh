@@ -5,7 +5,6 @@ npm run build
 
 # Push to deploy branch
 echo -e "\033[1;36mPushing dist folder to deploy branch\033[0m"
-git stash save
 git checkout deploy
 git stash pop
 cp -r dist/* ./
@@ -17,7 +16,6 @@ for f in dist/*; do
 done
 git stash save
 git checkout main
-git stash pop
 echo -e "\033[33m..done\033[0m"
 
 
