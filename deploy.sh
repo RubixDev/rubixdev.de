@@ -22,6 +22,7 @@
 
 
 npm run build
+git stash save
 git checkout deploy
 git stash pop
 cp -r dist/* ./
@@ -33,3 +34,4 @@ for f in dist/*; do
 done
 git stash save
 git checkout main
+git stash pop
