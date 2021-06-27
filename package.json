@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "rm -r dist && parcel build src/*.html --public-url '.' && parcel build src/*/*.html --public-url '..'",
+    "build": "rm -r dist && parcel build src/*.html",
     "deploy": "bash deploy.sh"
   },
   "repository": {
